@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.banner{
+    height: 100vh;
+    background-image: url(/lesson3/img/bannerForest.jpg);
+    background-size: 100% 100%;
+}
+
+.banner__title{
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+    color: white;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: auto;
+}
+.banner__text{
+    color: white;
+    font-style: italic;
+    text-align: center;
+    margin-top: 40px;
+}
+button{
+    font-size: 15px;
+    padding: 14px 40px;
+    color: white;
+    background-color: rgb(21, 21, 21);
+    border: none;
+    text-transform: uppercase;
+}
+.banner__btn{
+    text-align: center;
+    margin-top: 40px;
+}
+
