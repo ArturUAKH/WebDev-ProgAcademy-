@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: 95vh;
+    width: 70%;
+    border: 5px solid green;
+}
+
+.childRed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid red;
+    width: 90%;
+}
+.childRed:nth-child(1),.childRed:nth-child(4){
+    justify-content: space-around;
+    align-items: center;
+    height: 20%; 
+}
+
+.childRed:nth-child(2){
+height: 10%;
+justify-content: space-around;
+}
+
+.childRed:nth-child(3){
+height: 35%;
+justify-content: space-around;
+}
+
+.blue{
+    border: 5px solid blue;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.childRed:nth-child(1) .blue:nth-child(1),.childRed:nth-child(4) .blue:nth-child(1){
+    width: 25%;
+}
+
+.childRed:nth-child(1) .blue:nth-child(2),.childRed:nth-child(4) .blue:nth-child(2){
+    width: 40%;
+}
+
+.childRed:nth-child(1) .blue:nth-child(3),.childRed:nth-child(4) .blue:nth-child(3){
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.yellow{
+    border: 5px solid yellow;
+    width: 90%;
+    height: 35%;
+}
+
+.childRed:nth-child(2) .blue{
+    width: 23%;
+    height: 70%;
+}
+
+.childRed:nth-child(3) .blue{
+    height: 80%;
+}
+
+.childRed:nth-child(3) .blue:nth-child(1){
+    width: 25%;
+}
+
+.childRed:nth-child(3) .blue:nth-child(2){
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.childRed:nth-child(3) .blue:nth-child(2) .yellow{
+    width: 90%;
+}
+
+.childRed:nth-child(3) .blue:nth-child(2) .yellow:nth-child(1){
+    height: 60%;
+}
+
+.childRed:nth-child(3) .blue:nth-child(2) .yellow:nth-child(2){
+    height: 10%;
+}
+
+.childRed:nth-child(4){
+    justify-content: space-around;
+    align-items: center;
+    height: 20%; 
+    flex-direction: row-reverse;
+}
+
