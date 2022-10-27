@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form{
+    width: 500px;
+    font-size:small;
+    margin: 30px auto;
+    padding: 15px 15px;
+    border: 1px solid lightblue;
+}
+
+.form__item{
+    display: flex;
+    text-align: end;
+    margin-top: 5px;
+
+}
+
+.form__itemText{
+    width: 21%;
+    margin-right: 15px;
+
+}
+
+input, select{
+    outline: none;
+    border: 1px solid lightblue;
+    margin-left: 5px;
+    width: 40%;
+}
+ input:focus{
+    border: 3px solid lightblue;
+ }
+
+option{
+    font-size:small;
+}
+
+.textArea{
+   width: 70%;
+   height: 100px;
+}
+
+.form__item:nth-child(5) input{
+    width: 60px;
+    height: 20px;
+
+}
+
+img{
+    border: 1px solid lightblue;
+    height: 40px;
+    margin-left: 10px;
+}
+
+span{
+    text-decoration: underline;
+}
+
+input[type="submit"]{
+    border-radius: 2px;
+    width: 100px;
+    margin: 10px 0 20px 120px;
+}
