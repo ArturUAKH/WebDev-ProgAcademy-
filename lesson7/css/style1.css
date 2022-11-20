@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url(/fonts/Roboto-Regular.ttf);
+}
+body{
+    font-family: "Roboto-Regular";
+    background-color: rgb(44, 44, 44);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.header{
+    display: flex;
+    align-items: center;
+    height: 11vh;
+    width: 100vw;
+    background-color: rgb(80, 80, 80); 
+}
+.menu{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.menu__list{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    list-style: none;
+}
+
+.menu__item{
+    color:rgb(178, 178, 178);
+    font-size: 18px;
+    padding: 0 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid rgba(139, 139, 139, 0.5);
+}
+.menu__item a{
+    color:rgb(178, 178, 178);
+    text-decoration: none;
+    transition: 500ms;
+}
+.menu__item:hover a{
+    color:rgb(150, 250, 0)
+}
+.fa-arrow-right{
+    font-size: 14px;
+}
+.menu__log{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.log__icon a, .reg__icon a{
+    text-decoration: none;
+    color:rgb(178, 178, 178);
+    transition: 500ms;
+}
+.log__icon:hover a, .reg__icon:hover a{
+    color:rgb(150, 250, 0)
+}
+
+.fa-arrow-right-to-bracket, .fa-person{
+    margin-right: 10px;
+    font-size: 20px;
+}
+.lang{
+    width: 20%;
+    display: flex;
+    justify-content:space-between;
+    margin-right: 10px;
+}
+.lang__eng, .lang__ru{
+    color:rgb(178, 178, 178);
+    cursor: pointer;
+}
