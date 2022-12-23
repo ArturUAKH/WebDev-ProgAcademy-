@@ -27,6 +27,7 @@
     font-style: italic;
     text-align: center;
     margin-top: 40px;
+    font-size: 18px;
 }
 button{
     font-size: 15px;
@@ -36,6 +37,7 @@ button{
     background-color: rgb(21, 21, 21);
     border: none;
     text-transform: uppercase;
+    cursor: pointer;
 }
 .banner__btn{
     text-align: center;

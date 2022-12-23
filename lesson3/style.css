@@ -8,14 +8,14 @@
     background-image: url(/lesson3/img/bannerForest.jpg);
     background-size: 100% 100%;
 }
-
+.banner__info{}
 .banner__title{
     display: flex;
     justify-content: center;
     padding-top: 200px;
     color: white;
     font-style: italic;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -26,6 +26,7 @@
     font-style: italic;
     text-align: center;
     margin-top: 40px;
+    font-size: 20px;
 }
 button{
     font-size: 15px;
@@ -38,4 +39,27 @@ button{
 .banner__btn{
     text-align: center;
     margin-top: 40px;
+    cursor: pointer;
+}
+button{
+    transition: 500ms;
+}
+.banner__btn:hover button{
+    background-color:white;
+    color:black;
+}
+@media screen and (max-width:678px) {
+    .banner__title h1{
+        font-size: 27px;
+    }
+    .banner__text{
+        margin: auto;
+        text-align: center;
+        width: 65vw;
+        margin-top: 50px;
+    }
+    .banner{
+        background-position: center;
+        background: url(img/bannerForest.jpg);
+    }
 }

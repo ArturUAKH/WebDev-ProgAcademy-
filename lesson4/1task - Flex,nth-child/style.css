@@ -25,16 +25,16 @@ body{
     justify-content: center;
     align-items: center;
     border: 5px solid red;
-    width: 90%;
+    width: 85%;
 }
 .childRed:nth-child(1),.childRed:nth-child(4){
     justify-content: space-around;
     align-items: center;
-    height: 20%; 
+    height: 18%; 
 }
 
 .childRed:nth-child(2){
-height: 10%;
+height: 9%;
 justify-content: space-around;
 }
 
@@ -70,7 +70,7 @@ justify-content: space-around;
 
 .yellow{
     border: 5px solid yellow;
-    width: 90%;
+    width: 80%;
     height: 35%;
 }
 

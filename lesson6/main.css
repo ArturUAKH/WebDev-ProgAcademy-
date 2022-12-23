@@ -1,10 +1,10 @@
 @font-face {
     font-family: "OBaby";
-    src: url(../lesson6/fonts/OoohBaby-Regular.ttf);
+    src: url(fonts/OoohBaby-Regular.ttf);
 }
 @font-face{
     font-family: "Roboto-Light";
-     src: url(/lesson6/fonts/Roboto-Light.ttf);
+     src: url(fonts/Roboto-Light.ttf);
 }
 body{
     font-family: "Roboto-Light";
@@ -16,13 +16,15 @@ body{
 }
 
 .banner{
-    height: 63vh;
-    background-image: url(/lesson6/img/bannerForest.jpg);
-    background-size: 100% 155%;
-    position: relative;
+    height: 60vh;
+    background: url(img/bannerForest.jpg);
+    background-size: 100% 180%;
+    background-position: center;
+    padding-top: 70px;
 }
 
 .banner__title{
+    display: block;
     letter-spacing: 5px;
     font-family: "OBaby";
     background-color: rgba(255, 255, 255, 0.4);
@@ -33,10 +35,17 @@ body{
     margin-top: 70px;
     padding-bottom: 10px;
 }
+.banner__title2{
+    width: 100%;
+    margin: auto;
+    background: rgba(210, 210, 210, 0.4);
+}
 h1{
     color: rgb(19, 19, 19);
     font-size: 70px;
     margin-bottom: 5px;
+    font-family: "Obaby";
+    text-align: center;
 }
 
 h2{
@@ -44,30 +53,32 @@ h2{
     margin-right: 20px;
 }
 
-.banner__items{
-    display: flex;
-    justify-content: space-around;
-    position: absolute;
-    margin:0 auto;
-    bottom: 35px;
-    right: 150px;
-    left: 150px;
-}
+.banner__items2{
+    margin: auto;
+   display: flex;
+   width: 80vw;
+   justify-content: space-around;
+   height: 45vh;
+   align-items: center;
 
-.banner__item{
+
+}
+.banner__item2{
     position: relative;
     border-radius: 5px;
-    height: 200px;
-    width: 300px;
+    height: 27vh;
+    width: 20vw;
     background-color:rgba(49, 48, 48, 0.4);
     box-shadow: 2px 2px 5px rgb(11, 11, 11);
     
 }
 
+
 .banner__item_title{
     color:rgb(218, 218, 218);
     margin: 40px 20px 20px 30px;
     text-align: end;
+    font-size: 18px;
 }
 
 .banner__item_descr{
@@ -76,14 +87,15 @@ h2{
     margin: 10px 20px 0 20px;
     font-size: 14px;
 }
-
-.more{
+.footer{
     display: flex;
-    justify-content: space-around;
 }
-
+.more{
+    width: 50%;
+    padding: 0 0 0 50px;
+}
 .more__title{
-    margin: 30px 0 50px 150px;
+    margin: 30px 0 50px 0px;
     width: 35%;
 }
 
@@ -91,7 +103,8 @@ h2{
     width: 30%;
 }
 .social__title{
-    margin: 30px 50px 35px 0;
+    font-size: 17px;
+    margin: 30px 50px 60px 0;
 }
 .social__link{
     margin-top: 15px;
@@ -101,6 +114,7 @@ h2{
 .more__descr{
     text-align:justify;
     margin-top: 30px;
+    width: 57%;
 }
 
 i{
@@ -118,7 +132,7 @@ a{
     border-radius: 50%;
     background-color: gray;
     left: -2px;
-    top: -2px;
+    top: -1px;
     z-index: -1;
 
 }
@@ -136,4 +150,81 @@ a{
     top: 43px;
     left: 120px;
 }
+@media screen and (max-width: 678px) {
+    body{
+        width: 100vw;
+    }
+    h1{
+        font-size: 33px;
+    }
+    .banner{
+        width: 100vw;
+        min-height: 120vh;
+        background-size: 324% 100%;
+        padding-top: 30px;
+    }
+    
+    .banner__items2{
+        flex-direction: column;
+        margin: auto;
+        right: 0;
+        left: 0;
+        bottom:0;
+        top: 60px;
+        justify-content: space-between;
+        height: 100vh;
 
+    }
+    .banner__item2{
+        margin: 15px auto;
+        width: 100%;
+        height: 35vh;
+        
+    }
+    .banner__item_title{
+        font-size: 14px;
+    }
+    .footer{
+        flex-direction: column;
+        margin: auto;
+    }
+    .more{
+        width: 80%;
+        margin: auto;
+        padding: 0;
+    }
+    .more__descr{
+        width: 80%;
+        margin:20px auto;
+        padding: 0;
+    }
+    .social{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .social__link{
+        margin-bottom: 15px;
+
+    }
+    .more__title{
+        width: 100%;
+        margin: auto;
+    }
+    .more__title h2{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .social__title{
+        margin:20px auto;
+    }
+    .social__link{
+        text-align: center;
+    }
+    .circle{
+        left: 162px;
+        top: -3px;
+    }
+
+}

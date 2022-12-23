@@ -10,7 +10,7 @@ body{
     align-items: center;
     justify-content: center;
 }
-.from__body{
+.form__body{
     display: flex;
     
     /* align-items: center;
@@ -28,7 +28,7 @@ body{
     align-items: center;
     position: relative;
 }
-form{
+.form{
     border-color: rgba(17, 17, 17, 0.4);
     border-right-style: inset;
 }
@@ -63,8 +63,8 @@ input{
 }
 
 #message{
-    height: 130px;
-    width: 350px;
+    height: 70%;
+    width: 75%;
     margin: 15px 10px 50px 0;
     padding: 0 0 100px 0;
     
@@ -82,4 +82,31 @@ input[type="submit"]{
 }
 .form__item:nth-child(5) .form__text{
     padding-bottom: 130px;
+}
+@media screen and (max-width: 678px) {
+    body{
+        display: block;
+    }
+    .form{
+        height: 80vh;
+        margin-top: 5vh;
+    }
+    .form__title{
+        width: 100%;
+    }
+    .form__item{
+        height: 15%;
+        flex-direction: column;
+    }
+    .form__item:nth-child(5){
+        height: 35%;
+    }
+    .form__item:nth-child(5) .form__text{
+        padding-bottom: 0;
+    }
+    #message{
+        height: 50%;
+        padding-top: 10px;
+    }
+
 }

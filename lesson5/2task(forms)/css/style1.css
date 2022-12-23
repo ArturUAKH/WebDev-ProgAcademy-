@@ -68,3 +68,19 @@ input[type="submit"]{
     margin: 10px 0 20px 120px;
     cursor: pointer;
 }
+@media screen and (max-width: 678px) {
+    .form__body{
+        height: 70vh;
+    }
+    .form{
+        margin-top: 3vh;
+        width: 95vw;
+        height: 60vh;
+    }
+    .form__item{
+        margin-top: 3vh;
+    }
+    input, select{
+        width: 70%;
+    }
+}

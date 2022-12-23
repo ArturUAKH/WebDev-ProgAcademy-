@@ -103,3 +103,43 @@ li{
 	height: 100px;
 	margin-right: 20px;
 }
+@media screen and (max-width: 678px) {
+	.form{
+		width: 100vw;
+		
+	}
+	.form__body{
+		flex-direction: column;
+		width: 90vw;
+		margin: auto;
+		align-items: center;
+	}
+	.form__left{
+		width: 100%;
+	}
+	.form__right{
+		padding-left: 0;
+	}
+	.form__body>div{
+		width: 90%;
+	}
+	.form__item{
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 5px 0;
+		margin: 25px 0 25px 1px;
+	}
+	.form__webItem{
+		flex-direction: column;
+	}
+	#w-50{
+		width: 83%;
+	}
+	.form__header select{
+		margin: 0 40%;
+	}
+	#message{
+		width: 90%;
+		height: 65px;
+	}
+}	
