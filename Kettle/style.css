@@ -1,0 +1,261 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(/fonts/Poppins-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  font-family: "Poppins";
+  width: 1440px;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background: white;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: space-around;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+.header__logo {
+  height: 20px;
+  position: relative;
+  width: 105px;
+}
+.header__logo img {
+  position: absolute;
+  left: -30px;
+}
+.header__nav {
+  width: 550px;
+}
+.header__menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__menu li {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  cursor: pointer;
+  height: 100%;
+  line-height: 70px;
+  letter-spacing: 0.2em;
+}
+.header__menu li:nth-child(1):hover, .header__menu li:nth-child(2):hover, .header__menu li:nth-child(3):hover {
+  border-bottom: 5px solid black;
+}
+.header__icons {
+  width: 112px;
+  display: flex;
+  justify-content: space-between;
+}
+.header__icons img {
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  width: 100vw;
+  min-height: 95vh;
+  background: #95CFD5;
+  margin: auto;
+  position: relative;
+  margin-top: 30px;
+}
+.main .banner__title {
+  width: 540px;
+  height: 150px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 150px;
+  color: white;
+  margin: 130px 0 0 152px;
+}
+.main .banner__text {
+  width: 560px;
+  height: 48px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 8px 0 0 152px;
+  color: white;
+}
+.main .banner__btnWrapper {
+  display: flex;
+  height: 92px;
+  width: 540px;
+  margin: 35px 0 0 152px;
+  align-items: center;
+}
+.main .banner__btnWrapper .btn__shop {
+  height: 52px;
+  width: 250px;
+  background: black;
+  border-radius: 6px;
+  color: white;
+  text-transform: uppercase;
+  box-shadow: 0px 9px 14px rgba(0, 0, 0, 0.25);
+  transition: 200ms;
+}
+.main .banner__btnWrapper .btn__shop:hover {
+  background: rgb(255, 255, 255);
+  color: black;
+  border: none;
+  font-weight: bold;
+}
+.main .banner .btn__play {
+  height: 52px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .banner .btn__play .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+.main .banner .btn__play .circle:hover > .circle__inside {
+  background: white;
+  transition: 1s;
+}
+.main .banner .btn__play .circle:hover .circle__inside::before {
+  border-left: 9px solid black;
+}
+.main .banner .btn__play .circle .circle__inside {
+  position: relative;
+  height: 28px;
+  width: 28px;
+  background: black;
+  border-radius: 50%;
+}
+.main .banner .btn__play .circle .circle__inside::before {
+  content: "";
+  width: 5px;
+  position: absolute;
+  border-left: 9px solid white;
+  border-top: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  top: 8px;
+  left: 11px;
+  z-index: 5;
+}
+.main .banner .btn__play .btn__text {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 15px;
+}
+.main .banner .kettles__wrapper {
+  width: 370px;
+  height: 80px;
+  margin: 64px 0 0 152px;
+  display: flex;
+  justify-content: space-between;
+}
+.main .banner .kettles__wrapper .kettles__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border: 1px solid white;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.main .banner .kettles__wrapper .kettles__items:nth-child(1) .kettles__img {
+  background: url(/img/blueKettle.png);
+}
+.main .banner .kettles__wrapper .kettles__items:nth-child(2) .kettles__img {
+  background: url(/img/redKettle.png);
+}
+.main .banner .kettles__wrapper .kettles__items:nth-child(3) .kettles__img {
+  background: url(/img/violetKettle.png);
+}
+.main .banner .kettles__wrapper .kettles__items:nth-child(4) .kettles__img {
+  background: url(/img/pinkKettle.png);
+}
+.main .banner .kettles__wrapper .kettles__items:nth-child(1n) {
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.main .banner .kettles__wrapper .kettles__items:nth-child(1n):hover {
+  background: white;
+}
+.main .banner .kettles__wrapper .kettles__items .kettles__img {
+  width: 70%;
+  height: 90%;
+}
+.main .banner__right {
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+.main .kettle {
+  background: url(/img/kettleBigBlu.png);
+  width: 421px;
+  height: 542px;
+  position: absolute;
+  right: 206px;
+  top: 68px;
+  z-index: 5;
+}
+.main .kettle__color {
+  background: url(/img/BLUE.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 501px;
+  height: 120px;
+  top: 280px;
+  right: -35px;
+  transform: rotate(-90deg);
+  z-index: 1;
+}
+.main .trecker {
+  position: absolute;
+  right: 70px;
+  top: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 14px;
+  height: 70px;
+}
+.main .trecker__items {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.main .trecker__items::before {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+@media (max-width: 678px) {
+  .main {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */
