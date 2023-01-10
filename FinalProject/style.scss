@@ -1,0 +1,158 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Museo Sans";
+    src: url(/fonts/MuseoSansCyrl-500.ttf);
+}
+body{
+    font-family: "Museo Sans";
+}
+.container{
+    width: 1200px;
+    margin: auto;
+}
+.header{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    box-shadow: 0px 1px 3px rgb(71, 71, 71);
+    background:white;
+    &__logo{
+        margin-left: 80px;
+        line-height: 80px;
+    }
+}
+.menu{
+    margin-left: 57px;
+    &__list{
+    display: flex;
+    width: 600px;
+    height: 100%;
+    list-style: none;
+    justify-content: space-between;
+    line-height: 80px;
+}
+
+.menu__item{
+    cursor: pointer;
+    transition: 300ms;
+    &:hover{
+        margin-bottom: 5px;
+        font-size: calc(+110%);
+    }
+}
+// .language{
+//     width: 80px;
+//     height: 34px;
+//     border: 1px solid black;
+}
+.language{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80px;
+    height: 40px;
+    margin: 20px 0 20px 240px;
+    border: 1px solid black;
+    border-radius: 60px;
+    padding: 5px 10px;
+    &__arrow{
+        margin-left: 13px;
+    }
+}
+.sign{
+    width: 167px;
+    height: 40px;
+    margin: 20px 60px 20px 30px;
+    &__btn{
+        height: 100%;
+        width: 100%;
+        border-radius:60px;
+        background: #6248FF;
+        border:none;
+        text-transform: uppercase;
+        color: white;
+        transition: 300ms;
+        &:hover{
+            background: #8d79ff;
+        }
+    }   
+}
+.banner{
+    background: #EFEDFF;
+    min-height: 87vh;
+    margin-top: 80px;
+    width: 100%;
+    border-top: 1px solid transparent;
+    .container{
+        display: flex;
+    }
+    &__left{
+        width: 50%;
+        height: 87vh;
+    }
+    &__title{
+        width: 585px;
+        height: 215px;
+        margin-top: 100px;
+        h1{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 64px;
+            line-height: 72px;
+            color: #333333;
+        }
+    }
+    &__subtitle{
+        margin-top: 20px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: #4F4F4F;
+    }
+    .demo__btn{
+        width: 245px;
+        height: 54px;
+        background: #6248FF;
+        border-radius: 60px;  
+        border:none;
+        margin-top: 40px;
+        text-transform: uppercase; 
+        font-family: 'Museo Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;      
+        color: white;
+        cursor: pointer;
+        transition: 300ms;
+        letter-spacing: 1px;
+        &:hover{
+            background: #7181FC;
+        }
+    }
+    &__right{
+        width: 50%;
+        height: 87vh;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        border-top: 1px solid transparent;
+        .diagram{
+            height: 480px;
+            width: 450px;   
+            background: url(/img/schedule.png);
+            background-size: 90% 90%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin-top: 60px;
+        }
+    }
+
+}
