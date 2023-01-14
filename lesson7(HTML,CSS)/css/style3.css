@@ -14,7 +14,7 @@ body{
 }
 .header{
     height: 13vh;
-    width: 65%;
+    width: 99%;
     background-color:rgb(246, 246, 246);
     margin: 0 auto;
 }
@@ -89,19 +89,21 @@ body{
 .menu__item:nth-child(2) .burger:hover .burger__info{
     z-index: 1;
     transform: scale(1);
+    top: 52px;
+    right: 36px;
 }
 .menu__item:nth-child(4) .burger:hover .burger__info{
 transform: scale(1);
 z-index: 1;
-right: -27px;
-top: 62px;
+right: -7px;
+top: 52px;
 }
 
 .menu__item:nth-child(7) .burger:hover .burger__info{
     transform: scale(1);
     z-index: 1;
-    right: -15px;
-    top: 63px;
+    right: 5px;
+    top: 52px;
     }
 
 @media screen and (max-width: 678px) {
