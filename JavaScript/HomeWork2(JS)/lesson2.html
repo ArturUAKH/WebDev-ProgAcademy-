@@ -1,0 +1,110 @@
+ <!-- 
+    1. Среди трех чисел найти среднее арифметическое. Если среди чисел есть равные, вывести сообщение "Ошибка". Числа принять от пользователя.
+
+    2. Построить прямоугольный треугольник состоящий из символа "*".
+
+    3. Определить какое из трех, введенных пользователем, чисел максимальное и вывести его на экран.
+
+    4. Дано два числа A и B где (A<B). 
+    Выведите на экран суму всех чисел расположенных в числовом промежутке от А до В. 
+    Выведите на экран все нечетные значения, расположенные в числовом промежутке от А до В. 
+
+
+    5. Вывести на экран ряд чисел Фибоначчи, состоящий из n элементов (n принять от пользователя).
+       Числа Фибоначчи – это элементы числовой последовательности, в которой каждое последующее число равно сумме двух предыдущих.
+
+    6. Вывести на экран таблицу умножения от 0 до 9.  -->
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+    </head>
+    <body>
+      <script type="text/javascript">
+      //Перше завдання
+
+      let num1 = +prompt('Enter first num.');
+      let num2 = +prompt('Enter second num.');
+      let num3 = +prompt('Enter third num.');
+      let result = 0;
+      if(num1 === num2 || num1 === num3 || num2 === num3){
+         alert('Error');
+      }else{
+         result = (num1 + num2 + num3) / 3;
+         alert("You result is "+result);
+      };
+      
+      //Друге завдання
+
+      let result2 = '';
+
+      for(let i = 0; i < 10; i++){
+         
+         for(let j = 0; j < i; j++){
+            result2 += '*';
+         }
+         result2 += "\n";
+      }
+      console.log(result2);
+
+      //Трете завдання
+  
+      let userNum1 = +prompt('Enter first num.');
+      let userNum2 = +prompt('Enter second num.');
+      let userNum3 = +prompt('Enter third num.');
+      alert("Max number is " + Math.max(userNum1,userNum2,userNum3));
+
+      //Четверте завдання
+
+      let firstNum = 0;
+      let secondNum = 50;
+      let sum = 0;
+      for(i = firstNum; i < secondNum; i++){
+         sum += i;
+         if(i % 2 == 0 && i != 0){
+            console.log("Even number is " + i);
+         }
+      }
+      console.log('Your result is ' + sum);
+
+      //Пяте завдання
+      
+      let countFib = +prompt("Fib count?");
+      let result3 = '';
+
+      let firstFib = 0;
+      let secondFib = 1;
+
+      for(let i = 0; i < countFib; i++){
+        let sum = '';
+
+        sum = firstFib + secondFib;
+        firstFib = secondFib;
+        secondFib = sum;
+        result3 += " " + sum;
+      }
+   alert("You can watch results in console")
+   console.log(result3);
+
+      //Шосте завдання
+
+      document.write("<table border>");
+         for(let i = 1; i <= 10; i++){
+            document.write("<tr>");
+               for(let j = 1; j <= 10; j++){
+                  document.write(`<td> ${i} * ${j} = ${i * j} </td>`)
+               }
+            document.write("</tr>"); 
+              
+         }
+         document.write("</table>")
+
+   </script>
+    </body>
+    </html>
+   
