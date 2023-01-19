@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Poppins";
-  src: url(/fonts/Poppins-Regular.ttf);
+  src: url(fonts/Poppins-Regular.ttf);
 }
 * {
   margin: 0;
@@ -184,16 +184,16 @@
   cursor: pointer;
 }
 .main .banner .kettles__wrapper .kettles__items:nth-child(1) .kettles__img {
-  background: url(/img/blueKettle.png);
+  background: url(img/blueKettle.png);
 }
 .main .banner .kettles__wrapper .kettles__items:nth-child(2) .kettles__img {
-  background: url(/img/redKettle.png);
+  background: url(img/redKettle.png);
 }
 .main .banner .kettles__wrapper .kettles__items:nth-child(3) .kettles__img {
-  background: url(/img/violetKettle.png);
+  background: url(img/violetKettle.png);
 }
 .main .banner .kettles__wrapper .kettles__items:nth-child(4) .kettles__img {
-  background: url(/img/pinkKettle.png);
+  background: url(img/pinkKettle.png);
 }
 .main .banner .kettles__wrapper .kettles__items:nth-child(1n) {
   background-repeat: no-repeat;
@@ -212,7 +212,7 @@
   position: relative;
 }
 .main .kettle {
-  background: url(/img/kettleBigBlu.png);
+  background: url(img/kettleBigBlu.png);
   width: 421px;
   height: 542px;
   position: absolute;
@@ -221,7 +221,7 @@
   z-index: 5;
 }
 .main .kettle__color {
-  background: url(/img/BLUE.png);
+  background: url(img/BLUE.png);
   background-repeat: no-repeat;
   position: absolute;
   width: 501px;
