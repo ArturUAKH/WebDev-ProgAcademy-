@@ -1,0 +1,169 @@
+ <!-- 
+    1. Сделать собственные примеры методов применяемых для массивов.
+
+    2. Создать функцию для нахождения минимального и максимального элемента массива getMinAndMax(array).
+     Результат должен выводиться в консоль.
+
+    3. Определить элементы массива и вывести их значения, индексы которых лежит в указанном пределе. Предел вводит пользователь.
+
+    4. Отсортировать массив на 10 чисел в порядке возростания. Значения принимаются от пользователя. Сортировка осушествляется методом sort().
+    
+    5. Создать программу, выполняющую вставку элемента в массив после элемента, значение которого укажет пользователь.
+
+    6. Необходимо получить предпоследний элемент из массива month и вывести его на экран. 
+    var month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+
+    7. Создать два произвольных массива: один массив - любимая спортивная команда / модели автомобилей / города, во втором - количество игроков в команде / объем двигателя / количество жителей в городе. Объединить данные из двух массивов и вывести их в одну строку.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+
+    // Первое задание
+
+    let arr = ["e1", "e2", "e3", "e4", "e5", "e6"];
+    console.log('Получаем элемент под инексом 1 - ' + arr[1]);
+
+    console.log('Получаем длинну массива - ' + arr.length);
+
+    arr.push("e7");
+    console.log("Добавили элемент 'e7' в конец массива - " + arr);
+
+    arr.pop();
+    console.log("Удалили єлемент 'e7' из конца массива - " + arr);
+
+    arr.unshift("e0");
+    console.log("Добавили элемент 'e0' в начало массива - " + arr);
+
+    arr.shift();
+    console.log("Удалили єлемент 'e0' из начала массива - " + arr);
+
+    arr.reverse();
+    console.log("Разворачиваем массив в обратном порядке " + arr);
+
+    arr.sort()
+    console.log('Сортируем элементы в массиве (цифры и строки сортируются посимвольно по Unicode)' + arr);
+
+    let strFromArr = arr.join("/");
+    console.log("Получаем строку из элементов массива 'arr' разделяя их указанным символом '/' " + strFromArr);
+
+    arr = strFromArr.split("/");
+    console.log("Получаем массив из строки 'strFromArr' " + arr);
+
+    let arrConcat = arr.concat("e7", "e8", "e9");
+
+    console.log("Обьединили 'arr' с новыми элементами 'e7' ,'e8', 'e9' получили " + arrConcat);
+
+    let newArr = ["e7", "e8", "e9"];
+    let arrFromArr = arr.concat(newArr);
+    console.log("Обьединили 'arr' с новым массивом 'newArr' получили " + arrFromArr);
+
+    let arrSlice = arr.slice(1, 3);
+    console.log("Получили вырезанные эл. от индекса 1(включая) и до 3(не включая)" + arrSlice);
+    console.log("Исходный массив 'arr' не меняется " + arr);
+
+    let arrSplice = arr.splice(0, 2,);
+    console.log("вырезали 2 элемента начиная от индекса '0' " + arrSplice);
+    console.log("Вносит изменения в исходный массив 'arr' " + arr);
+
+    arr.splice(0, 0, "e1", "e2");
+    console.log("Возвращаем эл. методом 'splice' без удаления " + arr);
+
+    // Второе задание 
+
+    let arrNumbers = [66, 5, 11, 15, 99, 28, 17, 7, 43, 52];
+
+    function getMinAndMax(array){
+      let minNumber = arrNumbers[0];
+      let maxNumber = arrNumbers[0];
+      for(i = 0; i < arrNumbers.length; i++){
+        if(arrNumbers[i] < minNumber){
+          minNumber = arrNumbers[i];
+        }else if(array[i] > maxNumber){
+          maxNumber = arrNumbers[i];
+        }
+      }
+      console.log("Минимальное число в массиве " + minNumber);
+      console.log("Максимальное число в массиве " + maxNumber);
+
+    }
+    getMinAndMax(arrNumbers);
+
+    
+    // Третье задание
+
+    let firstIndex = +prompt("Введите начальный индекс от 0(включительно) до " + arrNumbers.length);
+    let lastIndex = +prompt('Введите конечный индекс от ' + firstIndex + ' до ' + arrNumbers.length + '(не включительно)');
+
+    for(i = firstIndex; i < lastIndex; i++){
+      document.write(`Под индексом ${i} находится значение ${arrNumbers[i]} <br>`);
+    };
+
+    // Четвертое задание 
+
+    let numbers = [];
+    function sortNumbers(){
+      for(i = 0; i < 10; i++){
+        let userNumber = +prompt("Введите число номер " + (i+1) + " в массив для сортировки.");
+        numbers.push(userNumber);
+        }
+        numbers.sort((a, b) => a - b)
+        console.log("Получаем отсортированный массив - " + numbers);
+    }
+    sortNumbers();
+
+    // Пятое задание
+
+    let arrData = ["e1", "e2", "e3", "e4", "e5", "e6", "e7", "e8", "e9",
+  "e10"];
+
+    function addValue(arr){
+      let userData = +prompt("Выберите от 0 до 10 место в массиве");
+      let userStr = prompt("Введите значение которое хотите вставить в массив");
+      
+      
+      arr.splice(userData , 0, userStr);
+      console.log("Массив с добавленным значением [ " + arr +" ]");
+      
+    }
+    addValue(arrData);
+    
+    // Шестое задание
+
+    var month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+    
+    console.log("Получаем предпоследний єлемент " + month[month.length - 2] + " с помощью 'arr[arr.length - 2]'");
+    let el = month.slice(-2, -1);
+    console.log("Получаем предпоследний єлемент " + el + " с помощью 'arr.slice(-2, -1)'");
+    console.log("Получаем предпоследний єлемент " + month.splice(month.length - 2, 1) + " с помощью arr.splice(arr.length - 2, 1)");
+
+    //Седьмое задание
+
+    let cities = ['Kharkiv', 'Lviv', 'Kyiv', 'Dnepr'];
+    let population = ['1950000', '1670000', '2400000', '1850000'];
+    for(i = 0; i < cities.length; i++){
+      document.write(cities[i].concat(` - ${population[i]} <br>`));
+    }
+
+
+     document.write('<br> ОСТАЛЬНЫЕ ОТВЕТЫ В КОНСОЛИ');
+
+
+
+
+
+
+
+  
+    
+
+
+  </script>
+</body>
+</html>
