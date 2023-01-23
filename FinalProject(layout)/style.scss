@@ -291,9 +291,16 @@ body{
     }
 }
 .people{
+    margin-top: 140px;
+    .container{
+        display: flex;
+    }
+    &__review{
+        margin-left: 130px;
+    }
     &__title{
         width: 480px;
-        height: 130px;
+        // height: 130px;
         .text{
             font-family: 'Museo Sans';
             font-style: normal;
@@ -319,8 +326,50 @@ body{
         .circles{
             height: 48px;
             width: 48px;
-            border: 1px solid #E0E0E0;
+            border: 2px solid #ebdede;
             border-radius: 50%;
+            background: url(img/Vector.png) no-repeat center;
+            &:nth-child(2){
+                transform: rotate(180deg);
+            }
         }
+    }
+    &__info{
+        display: flex;
+    }
+    &__img{
+        height: 73px;
+        width: 73px;
+        background: url(img/1275e156484ee1fc7dcc1af28a4a348e-wide-big.jpg) no-repeat;
+        background-size: 150% 110%;
+        background-position: center center;
+        border-radius: 50%;
+        margin-right: 30px;
+
+    }
+    &__data{
+        color: #333333;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 30px;
+        span{
+            color: #4F4F4F;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+
+        }
+    }
+    &__message{
+        width: 560px;
+        font-family: 'Museo Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 29px;
+        color: #333333;
+        margin-top: 10px;
     }
 }

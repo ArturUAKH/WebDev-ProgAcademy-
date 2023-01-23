@@ -1,0 +1,90 @@
+﻿<!-- 
+    1. Создать функцию calculate(operand1, operand2, sign), где operand1 и operand2 — два числа, sign — знак арифметической операции.
+       Функция должна расчитывать результат операции, исходя из переданного ей знака. 
+       Функция должна проверять корректность введенных чисел и знака операции.
+       Все аргументы для функции принять от пользователя.
+
+    2. Создать функцию, возводящую число в степень, число и сама степень вводится пользователем
+    
+    3.  Создать игру "Камень-Ножницы-Бумага".
+        Выбор компьютера определяется строкой:  
+        "var computerChoice = Math.random();
+        alert(computerChoice);".
+        Math.random() выдает произвольное число в промежутке от 0 до 1, на основании этого можно построить принцип выбора решения компьютера.
+
+    4. Напишите функцию, которая возвращает n-е число Фибоначчи. Для решения используйте цикл.
+
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+
+    //Задание 1 
+        let num1 = +prompt('Укажите первое число для операции.');
+        let sign = prompt('Укажите знак операции " + " " - " " * " " / "');
+        let num2 = +prompt('Укажите второе число для операции.');
+        
+
+    function calc(operand1, operand2, sign){
+        if(isNaN(num1) || isNaN(num2)){
+            alert('Вы ввели не числовое значение попробуйте еще раз!');
+            return ;
+        }
+        switch(sign){
+            case "+": 
+            alert(`Результат операции - ${num1 + num2}`);
+            break;
+            case "-": 
+            alert(`Результат операции - ${num1 - num2}`);
+            break;
+            case "*": 
+            alert(`Результат операции - ${num1 * num2}`);
+            break;
+            case "/": 
+            alert(`Результат операции - ${num1 / num2}`);
+            break;
+            default:
+                alert('Вы ввели неверный знак операции');
+        }
+    }
+    calc(num1, num2, sign);
+    //Задание 2
+    
+    let currentNumber = +prompt('Введите число для возведения в степень.');
+    let currentDegree = +prompt('Введите степень числа для результата.');
+    function calcDegree(num, deg){
+        return alert(`${num} в степени ${deg} равняется ${num ** deg}`);
+    }
+    calcDegree(currentNumber, currentDegree);
+    //Задание 3 
+    
+    alert('Игра "Камень" "Ножницы" "Бумага" \n Компьтер делает свой выбор... \n Cделайте свой выбор и нажмите "Ok"' );
+    const items = ['Камень', 'Ножницы', 'Бумага'];
+    var computerChoice = Math.round(Math.random() * (items.length - 1));
+    alert("Компьютер выбрал - " + items[computerChoice]);
+    
+    //Задание 4
+    let userNumber = +prompt('Введите номер числа Фибоначчи');
+    function fibNumber(numberUser){
+        let sum = '';
+        let first = 0;
+        let second = 1;
+        if(numberUser == 0){
+            return alert("Вы ввели - 0 рзультат - 0 ");
+        }
+    for(let i = 1; i < numberUser; i++){
+        sum = first + second;
+        first = second;
+        second = sum;
+      }
+      alert(`Число Фибоначчи номер ${userNumber} ровняется ${sum}`);
+    }
+    fibNumber(userNumber);
+      
+    </script>
+</head>
+<body>
+</body>
+</html>

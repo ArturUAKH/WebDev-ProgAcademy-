@@ -291,9 +291,17 @@ body {
   margin-top: 20px;
 }
 
+.people {
+  margin-top: 140px;
+}
+.people .container {
+  display: flex;
+}
+.people__review {
+  margin-left: 130px;
+}
 .people__title {
   width: 480px;
-  height: 130px;
 }
 .people__title .text {
   font-family: "Museo Sans";
@@ -321,6 +329,46 @@ body {
 .people__toggle .circles {
   height: 48px;
   width: 48px;
-  border: 1px solid #E0E0E0;
+  border: 2px solid #ebdede;
   border-radius: 50%;
+  background: url(img/Vector.png) no-repeat center;
+}
+.people__toggle .circles:nth-child(2) {
+  transform: rotate(180deg);
+}
+.people__info {
+  display: flex;
+}
+.people__img {
+  height: 73px;
+  width: 73px;
+  background: url(img/1275e156484ee1fc7dcc1af28a4a348e-wide-big.jpg) no-repeat;
+  background-size: 150% 110%;
+  background-position: center center;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+.people__data {
+  color: #333333;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+}
+.people__data span {
+  color: #4F4F4F;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+}
+.people__message {
+  width: 560px;
+  font-family: "Museo Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 29px;
+  color: #333333;
+  margin-top: 10px;
 }/*# sourceMappingURL=style.css.map */
