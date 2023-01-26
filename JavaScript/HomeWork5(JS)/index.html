@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+        .select{
+            margin: auto;
+            height: 400px;
+            width: 400px;
+            background: green;
+        }
+        #select__test{
+            width: 50%;
+            height: 10%;
+            width: 100%;   
+            margin-top: 20px; 
+        }
+        .btn__wrapper{
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        input{
+            margin: auto;
+            width: 80%;
+            margin-top: 20px;
+            }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="select">
+        <select name="select__block" id="select__test">
+            <option value="">
+                TEST1
+            </option>
+            <option value="">
+                TEST2
+            </option>
+            <option value="">
+                TEST3
+            </option>
+            <option value="">
+                TEST4
+            </option>
+            <option value>
+                TEST5
+            </option>
+            
+        </select>
+    <div class="btn__wrapper">
+        <button class="btnFirst">FIRST</button>
+        <button class="btnLast">LAST</button>
+        <button class="btnNext">NEXT</button>
+        <button class="btnPrev">PREV</button>
+        <input type="text" placeholder="add your value" id="inputBtn">
+        <button class="btnAddEl" >ADD ELEMENT</button>
+    </div>
+    </div>
+    <script type="text/javascript">
+        
+        let test = document.querySelector('select');
+        let FirstBtn = document.querySelector('.btnFirst');
+        let LastBtn = document.querySelector('.btnLast');
+        let NextBtn = document.querySelector('.btnNext');
+        let PrevBtn = document.querySelector('.btnPrev');
+        let AddBtn = document.querySelector('.btnAddEl');
+        let inp = document.querySelector('input');
+
+        FirstBtn.addEventListener('click', function(){
+            test.firstElementChild.selected = true; 
+        });
+
+        LastBtn.addEventListener('click', function(){
+            test.lastElementChild.selected = true; 
+        });
+
+        NextBtn.addEventListener('click', function(){
+            for(i = 0; i < test.children.length; i++){
+                if(test.children[i].selected == true){
+                    test.children[i].nextElementSibling.selected = true;
+                    break;  
+                }
+            } 
+        });
+        PrevBtn.addEventListener('click', function(){
+            for(i = 0; i < test.children.length; i++){
+                if(test.children[i].selected == true){
+                    test.children[i].previousElementSibling.selected = true;
+                    break;  
+                }
+            } 
+        });
+        AddBtn.addEventListener('click', function(){
+            if(inp.value.trim()){
+            let newEl = document.createElement('option');
+            newEl.innerText = inp.value;
+            test.append(newEl);
+            inp.value = '';
+            }
+        });
+
+    
+    </script>
+</body>
+</html>
