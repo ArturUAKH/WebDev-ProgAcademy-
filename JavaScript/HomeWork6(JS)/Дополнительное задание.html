@@ -1,0 +1,251 @@
+﻿<!-- 
+    1. Создать объект Point, содержащий два свойства: "x" и "y" — координаты точки, и метод GetQuadrant, вычисляющий,
+       в каком квадранте в декартовой системе координат находится данная точка.
+       Протестируйте данный объект, изменяя значения его координат, и повторно вызавая метод GetQuadrant.
+    
+    2. Создать объект Calculator, который должен содержать методы для расчета суммы, разности, произведения и частного двух чисел.
+       Протестировать данный объект, принимая от пользователя значения двух операндов и знак операции.
+       В зависимости от принятого знака операции, вызвать соответствующий метод.
+
+    3. Создать массив, который будет хранить в себе информацию о сотрудниках предприятия. Каждый элемент масива — объект,
+       содержащий свойства: name, sName, age, occupation, и метод show, который выводит всю информацию о пользователе.
+       Реализовать заполнение массива пользователем. По окончанию заполнения — вывести информацию о сотрудниках.
+    
+    4. Для предыдущего задания создайте функцию, которая будет принимать в себя массив объектов-сотрудников, и каждому из объектов
+       будет добавлять новое свойство "salary", хранящее зарплату сотрудника. 
+       Зарплата расчитывается, исходя из значения свойства "occupation" следующим образом:
+           • "director" — 3000;
+           • "manager" — 1500;
+           • "programmer" — 2000;
+           • для остальных значений — 1000.
+       После выполнения функции — вывести информацию о сотрудниках.
+           
+    5. Для задания 3 создать метод, позволяющий отсортировать массив сотрудников по одному из свойств: name, sName, age, occupation, salary.
+       Параметр для сортировки принимается от пользователя.
+       После выполнения функции — вывести информацию о сотрудниках.
+
+     -->
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+   <body>
+      <button class="salary">
+         Определить зарплату
+   </button>
+      <div class="sort">
+         сортировать:
+      </div>
+      <button class="sortNameBtn">
+         По имени
+      </button>
+      <button class="sortSecondNameBtn">
+         по фамилии
+      </button>
+      <button class="sortAgeBtn">
+         по возрасту
+      </button>
+      <button class="sortSalaryBtn">
+         по зарплате
+      </button>
+      <br>
+      <div class="employes__info">
+
+      </div>
+      <script  type="text/javascript">
+
+        // Первое задание
+
+         let point = new Object();
+
+         point.x = +prompt('Введите х в декартовую систему');
+         point.y = +prompt('Введите у в декартовую систему');
+         
+         point.getQuadrant = function(){
+            
+            if(this.x > 0 && this.y > 0){
+               alert('Точка находится в первой четверти');
+            }else if(point.x > 0 && point.y < 0){
+               alert('Точка находится в четвертой четверти');
+            }else if(point.x < 0 && point.y > 0){
+               alert('Точка находится в второй четверти');
+            }else if(point.x < 0 && point.y < 0){
+               alert('Точка находится в третьей четверти');
+            }else{
+               alert('Точка не находится в квадранте');
+            }
+         };
+         point.getQuadrant();
+
+         //Второе задание
+
+         let num1 = +prompt('Введите первое число для обьекта "calculator"');
+
+         let signOperation = prompt("Введите знак операции \n +  сложение \n -  вычетание \n *  производное \n /  частное двух чисел ");
+
+         let num2 = +prompt('Введите второе число для обьекта "calculator"');
+
+         const calculator = {
+            define: function(sign){
+               switch(sign){
+                  case '+':
+                     calculator.sum(num1, num2);
+                     break;
+                  case '-':
+                     calculator.minus(num1, num2);
+                     break;
+                  case '*':
+                     calculator.mult(num1, num2);
+                     break;
+                  case '/':
+                     calculator.div(num1, num2);
+                     break;
+                  default:
+                     alert('Вы ввели неверные данные');
+               }
+            },
+            sum: function(a, b){
+               return alert("Сумма указанных чисел " + (a + b));
+            },
+            mult: function(a, b){
+               return alert('Произведение указанных чисел равно ' + (a * b));
+            },
+            div: function(a, b){
+               return alert('Частное указанных чисел равно ' + (a / b));
+            },
+            minus: function(a, b){
+               return alert('Разница указанных чисел равна ' + (a - b));
+            },
+
+         }
+
+         calculator.define(signOperation);
+
+         // Третье задание
+         let arrData = [];
+         let div = document.querySelector('.employes__info');
+         let empCount = +prompt('Введите количество сотрудников');
+         let btnAddSalary = document.querySelector('.salary');
+         let sortNameBtn = document.querySelector('.sortNameBtn')
+         let sortSecondNameBtn = document.querySelector('.sortSecondNameBtn');
+         let sortAgeBtn = document.querySelector('.sortAgeBtn');
+         let sortSalaryBtn = document.querySelector('.sortSalaryBtn');
+
+         for(i = 0; i < empCount; i++){
+            let empData = new Object();
+
+            empData.name = prompt('Введите имя сотрудника ' + (i +1));
+            empData.sName = prompt('Введите фамилию сотрудника ' + (i +1));
+            empData.age = +prompt('Введите возраст сотрудника ' + (i +1));
+            empData.occupation = prompt('Введите должность сотрудника ' + (i + 1)  + '\n director \n manager \n programmer \n other').toLocaleLowerCase();
+            empData.show = function(){
+
+                div.innerHTML += (`Имя сотрудника - ${this.name} <br> фамилия - ${this.sName} <br> возраст - ${this.age}<br> должность - ${this.occupation} <br>`);
+                if(this.salary != undefined){
+                  div.innerHTML += `зарплата ${this.salary}<br><br>`;
+                }
+               
+            }
+            arrData.push(empData);
+            arrData[i].show();
+         }
+
+         //Четвертое задание
+
+         function addSalary(arr){
+            div.innerHTML = '';
+            for(i = 0; i < arr.length; i++){
+               if(arr[i].occupation === 'director'){
+                  arr[i].salary = 3000;
+               }else if(arr[i].occupation === 'programmer'){
+                  arr[i].salary = 2000;
+               }else if(arr[i].occupation === 'manager'){
+                  arr[i].salary = 1500;
+               }else if(arr[i].occupation === 'other'){
+                  arr[i].salary = 1000;
+               }else{
+                  alert('Произошла ошибка!')
+               }
+               arr[i].show();
+
+            }
+         }
+
+         function showData(arr){
+            div.innerHTML = '';
+            for(i = 0; i < arr.length; i++){
+               arr[i].show();
+            }
+         }
+
+
+         function sortNum(arr, el){
+
+         arr.sort((a, b) => Number(b.el) - Number(a.el));
+         }
+
+
+
+
+
+      arrData.sortItems = function(arr, el){
+        if(el === 'secondName'){
+            arr.sort((a, b) => {
+               if (a.sName < b.sName) {return -1;};
+               if (a.sName > b.sName) {return 1;};
+               return 0;
+            })
+         };
+
+         if(el === 'name'){
+         arr.sort((a, b) => {
+               if (a.name < b.name) {return -1;};
+               if (a.name > b.name) {return 1;};
+               return 0;
+         })
+         };
+    
+         if(el === 'salary'){
+            arr.sort((a, b) => Number(b.salary) - Number(a.salary));
+         }
+
+         if(el === 'age'){
+            arr.sort((a, b) => Number(b.age) - Number(a.age));
+         }
+      }
+
+      
+      sortNameBtn.addEventListener('click', () => {
+         arrData.sortItems(arrData, 'name');
+         showData(arrData);
+      });
+
+      sortSecondNameBtn.addEventListener('click', () => {
+         arrData.sortItems(arrData, 'secondName');
+         showData(arrData);
+      });
+
+      sortSalaryBtn.addEventListener('click', () => {
+         arrData.sortItems(arrData, 'salary');
+         showData(arrData);
+      });
+
+      sortAgeBtn.addEventListener('click', () => {
+         arrData.sortItems(arrData, 'age');
+         showData(arrData);
+      });
+      
+      btnAddSalary.addEventListener('click', () => {
+         addSalary(arrData);
+      });
+
+      
+         
+
+      </script>
+   </body>
+   </html>

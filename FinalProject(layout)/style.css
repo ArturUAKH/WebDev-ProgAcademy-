@@ -123,7 +123,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  color: #4F4F4F;
+  color: #636363;
 }
 .banner .demo__btn {
   width: 245px;
@@ -469,7 +469,84 @@ body {
   margin-top: 130px;
   border-top: 1px solid transparent;
 }
+.contact .container {
+  display: flex;
+  justify-content: space-between;
+}
 .contact__banner {
   width: 40%;
   margin-top: 120px;
+}
+.contact__title {
+  font-family: "Museo Sans";
+  color: #333333;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 66px;
+}
+.contact__textSupport, .contact__textSiteOwned {
+  margin-top: 32px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #4F4F4F;
+}
+.contact__phone, .contact__email, .contact__adress {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #4F4F4F;
+}
+.contact__phone span, .contact__email span, .contact__adress span {
+  font-weight: bold;
+  color: #333333;
+}
+.contact__form {
+  width: 560px;
+  height: 450px;
+  margin-top: 140px;
+  border: 2px solid #6248FF;
+  border-radius: 20px;
+  background: white;
+}
+.contact .form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  border-radius: 20px;
+  align-items: center;
+  padding: 80px 0 0 0;
+}
+.contact .form__item {
+  width: 425px;
+  height: 35px;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  outline: none;
+}
+.contact .form__item:nth-child(3) {
+  height: 75px;
+  padding-bottom: 45px;
+}
+.contact .form [type=submit] {
+  width: 172px;
+  height: 54px;
+  background: #6248FF;
+  border-radius: 60px;
+  border: none;
+  font-family: "Museo Sans";
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  transition: 300ms;
+}
+.contact .form [type=submit]:hover {
+  background: #7181FC;
 }/*# sourceMappingURL=style.css.map */
