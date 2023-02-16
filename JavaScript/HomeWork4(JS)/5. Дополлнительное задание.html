@@ -21,7 +21,7 @@
     <title></title>
     <script type="text/javascript">
 
-    //Задание 1 
+    //Перше завдання 
         let num1 = +prompt('Укажите первое число для операции.');
         let sign = prompt('Укажите знак операции " + " " - " " * " " / "');
         let num2 = +prompt('Укажите второе число для операции.');
@@ -50,7 +50,8 @@
         }
     }
     calc(num1, num2, sign);
-    //Задание 2
+
+    //Друге завдання
     
     let currentNumber = +prompt('Введите число для возведения в степень.');
     let currentDegree = +prompt('Введите степень числа для результата.');
@@ -58,14 +59,16 @@
         return alert(`${num} в степени ${deg} равняется ${num ** deg}`);
     }
     calcDegree(currentNumber, currentDegree);
-    //Задание 3 
+
+    //Трете завдання
     
     alert('Игра "Камень" "Ножницы" "Бумага" \n Компьтер делает свой выбор... \n Cделайте свой выбор и нажмите "Ok"' );
     const items = ['Камень', 'Ножницы', 'Бумага'];
     var computerChoice = Math.round(Math.random() * (items.length - 1));
     alert("Компьютер выбрал - " + items[computerChoice]);
     
-    //Задание 4
+    //Четверте завдання
+
     let userNumber = +prompt('Введите номер числа Фибоначчи');
     function fibNumber(numberUser){
         let sum = '';

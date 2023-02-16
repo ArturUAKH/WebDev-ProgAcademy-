@@ -1,0 +1,141 @@
+<html>
+<head>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" />
+ <title></title>
+<!--  Алгоритм взаємодії з клієнтом наступний: 
+В налаштуваннях цієї програми необхідно вводити одну константу мінімальну заробітну плату, це десь на адміністративній частині сайту, що недоступна користувачу.
+Ось дещо структурований алгоритм взаємодії
+Оберіть характер стягнення:
+варіанти: 
+1. майнове                         2. немайнове
+1.1        Якщо майнове то: введіть суму боргу, яку необхідно стягнути,
+1.1.1     якщо 2% від суми боргу менше або дорівнює 10 мінімальним заробітним платам  то розмір авансового внеску дорівнює 2% від суми, яку необхідно стягнути
+1.1.2     якщо 2% від суми боргу більше 10 мін. заробітних плат то сума авансового внеску дорівнює 10 мінімальним заробітним платам.
+ 
+2.1 Якщо немайнове, то питання: зазначте будь ласка стягувача із запропонованих варіантів 
+2.1.1     стягувачем є фізична особа (громадянин)  наслідок      розмір авансового внеску 1 мінімальна  заробітна плата програма розраховує
+2.1.2     Стягувачем є юридична особа (підприємство, установа, організація)  наслідок розмір авансового внеску 2 мінімальні заробітні плати  програма розраховує  -->
+ <style>
+    form{
+        height: 60vh;
+        width: 60vw;
+        background: rgb(244, 163, 163);
+        margin: auto;
+        padding: 50px;
+    }
+    .userInfo{
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        margin-top: 10px;
+    }
+    .switcher{
+        margin-top: 10px;
+
+    }
+    .sum{
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        margin-top: 10px;
+    }
+    .tax{
+        margin-top: 20px;
+    }
+    .hidden{
+        display: none;
+    }
+    .client{
+        margin-top: 20px;
+    }
+    input{
+        outline: none;
+        border: none;
+    }
+ </style>
+
+<form action="">
+    <div class="userInfo">
+        <div class="text">
+            ФИО:
+        </div>
+        <input type="text" id="name">
+    </div>
+    <div class="userInfo">
+        <div class="text">
+            Адрес:
+        </div>
+        <input type="text" id="adress">
+    </div>
+    <div class="userInfo">
+        <div class="text">
+            Почта:
+        </div>
+        <input type="text" id="email">
+    </div>
+        
+    <div class="switcher">
+        Имущество <input type="radio" name="type" id="own" checked="checked">
+        Деньги <input type="radio" name="type" id="money">
+    </div>
+    <div class="client hidden">
+        Физ. лицо <input type="radio" name="client" id="person" >
+        Юр. лицо <input type="radio" name="client" id="company">
+    </div>
+    <div class="sum">
+        <div class="text">
+            Сумма:
+        </div>
+        <input type="text" id="sum">
+    </div>
+    <div class="tax" id="tax">
+        <div class="text">
+            Комиссия: <span></span>
+        </div>
+    </div>
+
+ </form>
+  
+ <script>
+    const minWage = 6700.00
+    const own = document.querySelector('#own');
+    const money = document.querySelector('#money');
+    const person = document.querySelector('#person');
+    const company = document.querySelector('#company');
+    const sum = document.querySelector('#sum');
+    const tax = document.querySelector('#tax span');
+    const client = document.querySelector('.client');
+
+    own.addEventListener('change', hideElement);
+    money.addEventListener('change', hideElement);
+    sum.addEventListener('input', cahngeInput);
+    person.addEventListener('change', function(){
+        tax.innerHTML = `<b>${minWage}</b>`
+    });
+    company.addEventListener('change', function(){
+        tax.innerHTML = `<b>${minWage * 2}</b>`
+    });
+
+    function hideElement(){
+        sum.parentElement.classList.toggle('hidden');
+        client.classList.toggle('hidden');
+        sum.value = '';
+        tax.innerHTML = '';
+        
+    }
+
+    function cahngeInput(){
+        if(own.checked == true){
+            if((sum.value*0.02) <= (10*minWage)){
+                tax.innerHTML = (0.02*sum.value).toFixed(2);
+            }
+            else if((sum.value*0.02) > (10*minWage)){
+                 tax.innerHTML = 10*minWage;
+            }else{
+                tax.innerHTML = 'Невірне значення суми';
+            }
+        }
+      }
+ </script>
+</body>
+</html>
