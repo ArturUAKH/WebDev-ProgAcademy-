@@ -13,7 +13,6 @@ inputs.forEach(el => {
     el.addEventListener('focus', inputAnime);
 });
 
-
 function activeItems(e){
     
     let target = e.target;
@@ -23,23 +22,13 @@ function activeItems(e){
     });
     tabContent.forEach(el => {
         el.classList.toggle('show');
-    });
-
-    console.log(target);
-    
+    });    
 }
 
-inputs.forEach(el => {
-    el.addEventListener('focus', inputAnime);
-});
-
 function inputAnime(e){
-
     let label = e.target.previousElementSibling;
 
     label.classList.add('anime');
-    
-    
 }
 
 
