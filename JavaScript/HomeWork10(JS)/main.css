@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: "Titillium";
+    src: url(font/TitilliumWeb-Regular.ttf);
+}
+body{
+    font-family: "Titillium", sans-serif;
+    background:#C1BDBA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form__wrap{
+    max-width: 600px;
+    background:rgba(19, 35, 47, 0.9);
+    padding: 40px;
+    margin: 40px auto;
+    border-radius: 3px;
+    box-shadow: 0 4px 3px 4px rgba(105, 105, 105, 0.4);
+    
+}
+.tabs{
+    display: flex;
+    width: 500px;
+    height: 60px;
+    margin: auto;
+    
+}
+.tabs_item{
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    width: 50%;
+    background: rgba(160, 179, 176, 0.25);
+    color: rgb(182, 182, 182);
+    cursor: pointer;
+    transition: 500ms;
+}
+.tabs_item:hover{
+    background: rgb(19, 135, 104);
+    color: white;
+}
+.active{
+    background:rgb(26, 177, 136);
+    color: white;
+}
+.tab_content{
+    display: none;
+}
+.tab_content h1{
+    text-align: center;
+    margin: 40px;
+    color: white;
+    font-weight: 400;
+    transition: 300ms;
+}
+.show{
+    display: block;
+}
+.field_wrap{
+    max-width: 500px;
+    position: relative;
+}
+.inp_wrapper{
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    }
+.inp_wrapper>div{
+    width: 48%;
+}
+input{
+    height: 40px;
+    background: none;
+    border: 1px solid lightslategray;
+    width: 100%;
+    margin-bottom: 40px;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 20px;
+    color: white;
+}
+
+input:focus{
+    border-color: rgb(26, 177, 136);
+}
+.submit_btn{
+    width: 100%;
+    background:rgb(26, 177, 136);
+    height: 60px;
+}
+.submit_btn input{
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-weight: bolder;
+    letter-spacing: 0.2rem;
+    transition: 500ms;
+    cursor: pointer;
+}
+.submit_btn input:hover{
+    background:rgb(13, 156, 118);
+}
+label{
+    position: absolute;
+    color: rgb(142, 142, 142);
+    padding: 5px;
+    font-size: 22px;
+    pointer-events: none;
+    transition: 300ms;
+}
+.star{
+    color:rgb(26, 177, 136);
+}
+label.anime .star{
+    opacity: 0;
+}
+a{
+    position: absolute;
+    color:rgb(26, 177, 136);
+    text-decoration: none;
+    display: inline-block;
+    right: 0;
+    top: 50%;
+}
+#password{
+    margin-bottom: 60px;
+}
+
+.anime{
+    transform: translateY(-40px);
+    color: white;
+    font-size: 18px;
+
+}
+
+
+
+

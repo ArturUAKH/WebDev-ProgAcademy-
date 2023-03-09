@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="form__wrap">
+        <div class="tabs">
+            <div class="tabs_item active" id="sign">Sign Up</div>
+            <div class="tabs_item" id="log">Log In</div>
+        </div>
+
+        <div class="tab_content show">
+            <h1>Sign Up for Free</h1>
+            <form action="#" id="formSign">
+                <div class="inp_wrapper">
+                    <div class="field_wrap">
+                        <label >First Name <span class="star">*</span></label>
+                        <input type="text" required id="name"> 
+                    </div>
+
+                    <div class="field_wrap">
+                        <label >Last Name <span class="star">*</span></label>
+                        <input type="text" required id="lastName"> 
+                     </div>
+                    
+                </div>
+                <div class="field_wrap">
+                    <label >Email Adress <span class="star">*</span></label>
+                    <input type="text" required>
+                </div>
+                
+                <div class="field_wrap">
+                    <label >Set A Password <span class="star">*</span></label>
+                    <input type="text" required>
+                </div>
+
+                    <div class="submit_btn">
+                        <input type="submit" value="GET STARTED">
+                    </div>
+                    
+            </form>
+        </div>
+
+        <div class="tab_content">
+            <h1>Welcome Back!</h1>
+            <form action="#" class="formLog">
+                <div class="field_wrap">
+                    <label >Email Address <span class="star">*</span></label>
+                    <input type="text" required id="email" autocomplete="off"> 
+                </div>
+
+                <div class="field_wrap">
+                    <label >Password <span class= "star">*</span></label>
+                    <input type="password" required id="password" autocomplete="off">
+                    <a href="#" title="Forgot Password?">Forgot Password?</a>
+                </div>
+
+                <div class="submit_btn">
+                    <input type="submit" value="LOG IN" id="logBtn">
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

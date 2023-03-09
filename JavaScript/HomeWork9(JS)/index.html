@@ -27,6 +27,8 @@
             text-align: right;
             margin-bottom: 5px;
             border-radius: 5px;
+            outline: none;
+            padding: 5px;
         }
         .calculator__grid{
             display: grid;
@@ -80,7 +82,7 @@
             <div class="number">3</div>
             <div class="sign">+</div>
             <div class="number">0</div>
-            <div class="number">.</div>
+            <div class="sign">.</div>
             <div class="result">=</div>
         </div>
     </div>
@@ -92,23 +94,19 @@
         const sign = document.querySelectorAll('.sign');
         const result = document.querySelector('.result');
         const signToggle = document.querySelector('.signToggle');
+        const calculator = document.querySelector('.calculator__grid');
 
-        for(i = 0; i < number.length; i++){
-            number[i].addEventListener('click', drawValue);
-        }
+        calculator.addEventListener('click', function(e){
+            if(e.target.classList.contains('number') || e.target.classList.contains('sign')){
+                inp.value += e.target.innerText;
+            }else if(e.target.innerText == 'A/C'){
+                inp.value = '';
+            }else if(e.target.innerText == '='){
+                (inp.value.trim()) ? inp.value = eval(inp.value) : inp.value = inp.value;
+            }
 
-        for(i = 0; i < sign.length; i++){
-            sign[i].addEventListener('click', drawValue);
-        }
-
-        
-        clear.addEventListener('click', () => {
-            inp.value = '';
         });
 
-        result.addEventListener('click', function(){
-            inp.value = eval(inp.value);
-        });
 
         signToggle.addEventListener('click', function(){
             inp.value = inp.value * (-1);
@@ -120,11 +118,6 @@
             }
             
         });
-
-        function drawValue(){
-            inp.value += this.innerText;
-        }
-
 
     </script>
 </body> 
