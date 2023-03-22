@@ -11,15 +11,16 @@
 		}
 		img{
 			height: 200px;
+			position: absolute;
 		}
 	</style>
 </head>
 <body>
-	<div class="firstPoligon">
-		<img src="https://i.gifer.com/origin/88/889f42c8351eb014d98cb6984510bfb1.gif" alt="" draggable="true">
+	<div class="dragZone">
+		<img src="https://i.gifer.com/origin/88/889f42c8351eb014d98cb6984510bfb1.gif" alt="Flying bird" draggable="true">
 	</div>
-	<div class="secondPoligon"></div>
-	<script>
+	<div class="dragZone"></div>
+	<!-- <script>
 		const firstPoligon = document.querySelector('.firstPoligon');
 		const secondPoligon = document.querySelector('.secondPoligon');
 		const img = document.querySelector('img');
@@ -39,6 +40,7 @@
 			this.appendChild(img)
 			console.log(e)
 		}
-	</script>
+	</script> -->
+	<script src="dragDrop.js"></script>
 </body>
 </html>
