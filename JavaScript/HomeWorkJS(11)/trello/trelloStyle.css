@@ -6,6 +6,19 @@
 body{
     font-family: Arial;
 }
+#inp,#inpExecutor{
+    outline: none;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+#btn{
+    color: white;
+    background: rgb(0, 102, 255);
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+}
 #sprint{
     background: rgba(130, 129, 129, .8);
 }
@@ -54,14 +67,28 @@ body{
     border-radius: 5px;
 }
 .trello__appTask{
+    text-align: center;
+    position: relative;
     height: 150px;
-    padding: 10px 20px;
+    word-wrap: break-word;
+    padding: 30px 10px 5px 10px;
     border: 1px solid black;
     border-radius: 3px;
     margin: 10px;
-    overflow: hidden;
+  
     
 }
 .hide{
     display: none;
+}
+.closeBtn{
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    cursor: pointer;
+    color:red;
+    border: 1px solid grey;
+    border-radius: 10%;
+    padding: 5px;
+    font-size: 15px;
 }
