@@ -38,6 +38,7 @@ body{
     width: 20%;
     height: 400px;
     border-radius: 5px;
+    overflow-y: scroll;
 
 }
 .trello__appItemHeader{
@@ -59,6 +60,7 @@ body{
     border-radius: 3px;
     margin: 10px;
     overflow: hidden;
+    
 }
 .hide{
     display: none;
