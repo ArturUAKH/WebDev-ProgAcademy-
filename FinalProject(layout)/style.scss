@@ -650,6 +650,7 @@ body{
     }
 }
 
+
 @media screen and (max-width: 768px) {
     main{
         width: 100vw;
@@ -679,7 +680,7 @@ body{
             flex-direction: column;
         }
         h1{
-            
+
         }
         &__left{
             width: 100%;
@@ -864,3 +865,212 @@ body{
 
 
 }
+@media screen and (max-width: 320px){
+    .container{
+        width: 100vw;
+    }
+    .header{
+        &__logo{
+            left: 20px;
+            position: absolute;
+            margin: 0;
+        }
+        .sign__btn{
+            display: none;
+        }
+    }
+    .main{
+        .banner{
+            &__left{
+            width: 100vw;
+            }
+            &__title{
+                width: 320px;
+                h1{
+                    width: 280px;
+                    text-align: left;
+                    margin: 0 20px;;
+                    font-size: 40px;
+                    line-height: 44px;
+                }
+            }
+            &__subtitle{
+                width: 280px;
+                font-size: 18px;
+                line-height: 30px;
+            }
+            .demo__btn{
+                margin-top: 100px;
+            }
+            &__right{
+                width: 100vw;
+                .diagram{
+                    width: 250px;
+                    height: 300px;
+                }
+            }
+        }
+    }
+    .steps{
+        &__title{
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 44px;
+            width: 280px;
+            padding: 0 20px;
+        }
+        &__wrapper{
+            flex-direction: column;
+            .steps__text{
+                font-size: 18px;
+                line-height: 30px;
+            }
+        }
+        &__left{
+            row-gap: 0;
+            .steps__item{
+                margin: 25px 20px 0 20px;
+                width: 280px;
+                min-height: 250px;
+                &:nth-child(2){
+                    min-height: 280px;
+                    &::after{
+                        content: '02.';
+                    }
+                }
+                &::before{
+                    display: none;
+                }
+            }
+        }
+        &__right{
+            row-gap: 0;
+            margin-top: 0;
+            .steps__item{
+                min-height: 280px;
+                width: 280px;
+                margin: 25px 20px 0 20px;
+                &:nth-child(1)::after{
+                    content:'03.'
+                }
+                &::before{
+                    display: none;
+                }
+            }
+        }
+    }
+    .people{
+        &__title{
+            width: 280px;
+            margin: auto;
+            .text{
+                font-size: 40px;
+                line-height: 44px;
+                &::before{
+                    width: 280px;
+                    height: 50px;
+                }
+            }
+            .people__toggle{
+                top: 330px;
+                width: 280px;
+            }
+        }
+        &__review{
+            width: 320px;
+        }
+        &__info{
+            width: 320px;
+            line-height: 27px;
+        }
+        &__message{
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            width: 320px;
+            margin-bottom: 80px;
+            &::after{
+                bottom: -85px;
+            }
+        }
+    }
+    .questions{
+        &__title{
+            font-size: 40px;
+            line-height: 44px;
+            width: 280px;
+            margin: 100px 20px 40px 20px;
+        }
+        &__wrapper{
+            width: 100%;
+        }
+        &__item{
+            width: 280px;
+            height: 90px;
+            margin: 0 20px;
+            span::before,span::after{
+                right: 20px;
+            }
+        }
+        &__text{
+            font-size: 18px;
+            line-height: 22px;
+            margin-left: 15px;
+            width: 190px;
+            height: 45px;
+        }
+    }
+    .contact{
+        &__title{
+            font-size: 40px;
+            line-height: 44px;
+        }
+        width: 100%;
+        &__banner{
+            width: 90%;
+            font-size: 16px;
+            line-height: 27px;
+            span{
+                display: inline-block;
+                margin: 15px 0;
+            }
+        }
+        &__form{
+            width: 300px;
+            .form__item{
+                width: 90%;
+            }
+        }
+    }
+    .more{
+        .container{
+            max-height: 215vh;
+        }
+        &__item:nth-child(1){
+            height: 16px;
+            width: 45px;
+        }
+        &__item:nth-child(n+2){
+            margin-top: 320px;
+            width: 280px;
+            font-size: 16px;
+            line-height: 27px;
+            text-align: left;
+        }
+        &__item:nth-child(3){
+            margin-top: 25px;
+        }
+        &__list {
+            flex-direction: column;
+            li{
+            text-align: center;
+            font-size: 15px;
+            line-height: 16px;
+            text-align: left;
+        }
+    }
+}
+}
+   
+
+
