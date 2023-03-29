@@ -80,7 +80,7 @@ function toggleCurr(){
     this.classList.toggle('rotate');
     let select2 = document.querySelector('#sel2');
     [select1.selectedIndex,select2.selectedIndex] = [select2.selectedIndex,select1.selectedIndex];
-    getFirstCurr.bind(select1)();
-    getSecondCurr.bind(select2)();
+    getFirstCurr.call(select1);
+    getSecondCurr.call(select2);
     calcResult();
 }
