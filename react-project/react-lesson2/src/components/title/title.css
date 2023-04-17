@@ -1,8 +1,0 @@
-h1.title-header{
-    height: 200px;
-    background-image: linear-gradient(yellow,blue);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-}

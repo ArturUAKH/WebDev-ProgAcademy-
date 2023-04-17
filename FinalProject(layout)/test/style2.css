@@ -39,7 +39,7 @@ body {
   margin: 0 auto;
   background: white;
   position: fixed;
-  z-index: 3;
+  z-index: 15;
   top: 0;
   border-bottom: 1px solid grey;
 }
@@ -235,13 +235,19 @@ body {
   content: "";
   position: absolute;
   width: 80%;
-  height: 32%;
+  height: 35%;
   border: 2px dashed #6248FF;
   border-top-right-radius: 30px;
   border-bottom: none;
   border-left: none;
-  top: 48%;
+  top: 52%;
   left: 100%;
+}
+.steps__left .steps__item:nth-child(2) {
+  z-index: 11;
+}
+.steps__left .steps__item:nth-child(2)::before {
+  content: "03.";
 }
 .steps__right {
   width: 40%;
@@ -255,11 +261,17 @@ body {
   content: "";
   position: absolute;
   width: 80%;
-  height: 30%;
+  height: 35%;
   border: 2px dashed #6248FF;
   border-top-left-radius: 30px;
   border-bottom: none;
   border-right: none;
-  top: 42%;
+  top: 50%;
   right: 100%;
+}
+.steps__right .steps__item:nth-child(2) {
+  z-index: 13;
+}
+.steps__right .steps__item:nth-child(2)::before {
+  content: "04.";
 }/*# sourceMappingURL=style2.css.map */
