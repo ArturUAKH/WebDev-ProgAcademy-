@@ -2,9 +2,10 @@
     margin: 0;
 }
 body{
+    border-top: 1px solid transparent;
     font-family: sans-serif;
     height: 100vh;
-    background-image: url(/img/1642960322_1-phonoteka-org-p-fon-lesa-dlya-fotoshopa-1.jpg);
+    background-image: url(./img/1642960322_1-phonoteka-org-p-fon-lesa-dlya-fotoshopa-1.jpg);
     background-position: center center;
     background-size: 100%;
     color:aqua;
