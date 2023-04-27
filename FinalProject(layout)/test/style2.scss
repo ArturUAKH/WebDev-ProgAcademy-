@@ -169,7 +169,6 @@ body{
 
 .banner{
     background: #EFEDFF;
-    min-height: 100vh;
     margin-top: 10vh;
     border-top: 1px solid transparent;
     .container{
@@ -208,17 +207,7 @@ body{
     }
 }
 
-@media screen and (max-width:1000px) {
-    .banner{
-        min-height: auto;
-        h1{
-            font-size: 3rem;
-            margin-top: 10vh;
-            line-height: 50px;
-        }
-    }
-}
-@media screen and (max-width:769px) {
+@media screen and (max-width:768px) {
     .banner{
         .container{
             flex-direction: column;
@@ -240,7 +229,6 @@ body{
             }
         }
         &__right{
-
             display: flex;
             justify-content: center;
             align-items: center;
@@ -258,27 +246,83 @@ body{
     min-height: 100vh;
     min-width: 100%;
     &__wrapper{
+        min-height: 100vh;
         width: 100%;
-        display: flex;
         margin: 0 auto;
-        justify-content: space-around;
+        position: relative;
     }
     &__item{
-        background: white;
-        width:85%;
-        min-height: 20vh;
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing:border-box;
+        position: absolute;
+        margin: 0 auto;
+        width: 30%;
+        background:rgb(252, 252, 252);
         border: 2px solid #6248FF;
         border-radius: 30px;
         padding: 20px;
-        margin-top: 20%;
-        z-index: 10;
+        min-height: 23vh;
+
+        // background: white;
+        // width:85%;
+        // min-height: 20vh;
+        // position: relative;
+        // border: 2px solid #6248FF;
+        // border-radius: 30px;
+        // padding: 20px;
+        // margin-top: 20%;
+        // z-index: 10;
         &::before{
             content: "01.";
             font-weight: bold;
             font-size: 15px;
             line-height: 18px;
             color: #6248FF;
+        }
+        &:nth-child(odd){
+            &::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 50%;
+                border: 2px dashed #6248FF;
+                border-top-right-radius: 30px;
+                border-bottom: none;
+                border-left: none;
+                top: 40%;
+                left: 100%;
+            }
+        }
+        &:nth-child(1){
+            left: 12%;
+            top: 6vh;
+        }
+        &:nth-child(2){
+            right: 12%;
+            top: 20vh;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 50%;
+                border: 2px dashed #6248FF;
+                border-top-left-radius: 30px;
+                border-bottom: none;
+                border-right: none;
+                top: 55%;
+                right: 100%
+            }
+        }
+        &:nth-child(3){
+            left: 12%;
+            top: 42vh;
+                
+        }
+        &:nth-child(4){
+            right: 12%;
+            top: 58vh;
         }
     }
     &__subtitle{
@@ -293,92 +337,18 @@ body{
         font-size: 18px;
         line-height: 25px;
         color: #4F4F4F;
+        overflow: auto;
+        max-height:12vh;
     }
     &__title{
         font-size: 56px;
         line-height: 66px;
     }
-    &__left{
-        width: 40%;
-        gap: 200px;
-        .steps__item:nth-child(1n + 1){
-            &::after{
-                content: '';
-                position: absolute;
-                width: 80%;
-                height: 35%;
-                border: 2px dashed #6248FF;
-                border-top-right-radius: 30px;
-                border-bottom: none;
-                border-left: none;
-                top: 52%;
-                left: 100%
-            }
-        }
-        .steps__item:nth-child(2){
-            z-index: 11;
-            &::before{
-                content:'03.';
-            }
-        }
-    }
-    &__right{
-        width: 40%;
-        height: 100%;
-        margin-top: 12%;
-        .steps__item:nth-child(1){
-            &::before{
-                content:'02.'
-            }
-            &::after{
-                content:'';
-                position: absolute;
-                width: 80%;
-                height: 35%;
-                border: 2px dashed #6248FF;
-                border-top-left-radius: 30px;
-                border-bottom: none;
-                border-right: none;
-                top: 50%;
-                right: 100%;
-            }
-        }
-        .steps__item:nth-child(2){
-            z-index: 13;
-            &::before{
-                content:'04.'
-            }
-        }
-    }
+
 }
 
-@media screen and (max-width:1000px){
-    .steps{
-        &__title{
-            font-size: 2.6rem;
-        }
-    }
-}
-@media screen and (max-width:769px) {
-    .steps{
-        &__title{
-            font-size: 2rem;
-        }
-        &__subtitle{
-            font-size: 18px;
-        }
-        &__text{
-            font-size: 14px;
-        }
-        &__left{
-            .steps__item:nth-child(1)::after{
-                top: 38%;
-            }
-        }
-    }
-}
+
 .people{
-    margin-top: 20vh;
     .container{
         display: flex;
         justify-content: space-around;
@@ -387,7 +357,6 @@ body{
     }
     &__title{
         font-size: 56px;
-        line-height: 66px;
         width: 45%;
         margin-top: 0;
     }
@@ -466,30 +435,12 @@ body{
     }
 
 }
-@media screen and (max-width:1000px){
-    .people{
-        &__title{
-            font-size: 2.5rem;
-        }
-        &__img{
-            height: 50px;
-            width: 50px;
-        }
-        &__message{
-            font-size: 20px;
-            line-height: 23px;
-        }
-        .circle{
-            height: 40px;
-            width: 40px;
-        }
-    }
-}
+
+
 .questions{
     &__title{
         margin: 20vh 0 10vh 0;
         font-size: 56px;
-        line-height: 66px;
     }
     &__wrapper{
         margin: 0 auto;
@@ -557,7 +508,7 @@ body{
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: white;
+            background-color: rgb(245, 244, 244);
             border-radius: 20px;
             border: 2px solid #6248FF;
             padding: 15%;
@@ -591,3 +542,147 @@ body{
 }
 
 
+
+
+
+@media screen and (max-width:1000px){
+    .title{
+        font-size: 2.5rem;
+        line-height: normal;
+    }
+    .banner{
+        min-height: auto;
+        h1{
+            font-size: 3rem;
+            margin-top: 10vh;
+            line-height: 50px;
+        }
+    }
+    .people{
+        &__title{
+            width: 100%;
+        }
+        &__message{
+            font-size: 20px;
+            line-height: 23px;
+        }
+        .circle{
+            height: 40px;
+            width: 40px;
+        }
+    }
+    .questions__wrapperItem{
+        font-size: 22px;
+        height: 10vh;
+    }
+    .contact__info{
+        line-height: 20px;
+        &Support{
+            .support,.help,.owned{
+                margin-bottom: 1vh;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:768px){
+    .steps{
+        &__title{
+            width: 100%;
+        }
+        &__item{
+            width: 37%;
+            &:nth-child(-n+3):after{
+                width: 70%;
+            }
+        }
+        &__subtitle{
+            font-size: 18px;
+        }
+        &__text{
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+    .people{
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        &__info{
+            flex-direction: column;
+        }
+        &__review{
+            width: 100%;
+            margin: 0 auto;
+        }
+        &__data{
+            margin: 1rem 0 0 0;
+            line-height: 25px;
+            text-align: center;
+        }
+        &__message{
+            width: 57%;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 3rem;
+            &::after{
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+            }
+            .commes{
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                top: -2rem;
+            }
+        }
+        &__circlesBtn{
+            width: 90%;
+            top: 65%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+    }
+    .questions{
+        &__title{
+            width: 100%;
+        }
+        &__wrapper{
+            &Item{
+                padding: 0 0 0 15px;
+                font-size: 17px;
+                height: 8vh;
+            }
+        }
+    }
+    .contact{
+        .container{
+            flex-direction: column;
+        }
+        &__infoTitle{
+            text-align: center;
+        }
+        &__info{
+            margin: 0 auto;
+            width: 70%;
+        }
+        &__form{
+            height: 70vh;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            form{
+                position: static;
+                width: 80%;
+                height: 90%;
+                padding: 10%;
+            }
+        }
+    }
+}
