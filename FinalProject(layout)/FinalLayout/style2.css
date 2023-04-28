@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Museo";
-  src: url(fonts2/MuseoSansCyrl-500.ttf);
+  src: url(fonts/MuseoSansCyrl-500.ttf);
 }
 body {
   font-family: "Museo";
@@ -19,7 +19,7 @@ body {
 }
 
 .title {
-  margin-top: 2em;
+  margin-top: 2rem;
   width: 40%;
   font-weight: 600;
 }
@@ -429,6 +429,7 @@ body {
   align-items: center;
 }
 .questions__wrapperItem {
+  font-weight: 600;
   position: relative;
   height: 12vh;
   width: 78%;
@@ -438,7 +439,6 @@ body {
   align-items: center;
   padding: 0 0 0 40px;
   color: #333333;
-  font-weight: 500;
   font-size: 24px;
 }
 .questions__wrapperItem span {
@@ -478,7 +478,6 @@ body {
   margin: 15vh 0 5vh 0;
   position: relative;
   width: 50%;
-  height: 81vh;
 }
 .contact__form form {
   box-sizing: border-box;
@@ -518,6 +517,54 @@ body {
   height: 15%;
 }
 
+.footer .container {
+  padding: 20px;
+}
+.footer__aboutUs {
+  position: relative;
+  display: flex;
+  -moz-column-gap: 7%;
+       column-gap: 7%;
+}
+.footer__aboutUs .item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #4F4F4F;
+}
+.footer__aboutUs .item__title {
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+.footer__aboutUs .list {
+  width: 10vw;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 600;
+  list-style: none;
+  color: #333333;
+}
+.footer__aboutUs .list li {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.footer__privacy {
+  margin: 4rem 0 4rem 0;
+}
+.footer__privacyList {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.footer__privacyList li {
+  color: #828282;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+}
+
 @media screen and (max-width: 1000px) {
   .title {
     font-size: 2.5rem;
@@ -547,9 +594,9 @@ body {
     height: 10vh;
   }
   .contact__info {
-    line-height: 20px;
+    line-height: 30px;
   }
-  .contact__infoSupport .support, .contact__infoSupport .help, .contact__infoSupport .owned {
+  .contact__infoSupport .support, .contact__infoSupport .owned {
     margin-bottom: 1vh;
   }
 }
@@ -641,5 +688,147 @@ body {
     width: 80%;
     height: 90%;
     padding: 10%;
+  }
+  .footer__aboutUs {
+    margin: 0 auto;
+    flex-direction: column;
+    width: 100%;
+  }
+  .footer__aboutUs img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+  .footer__aboutUs .item:nth-child(2) {
+    margin: 7rem auto 2rem auto;
+    width: 60%;
+  }
+  .footer__aboutUs .item:nth-child(3) {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .footer__aboutUs .item__title {
+    text-align: center;
+  }
+  .footer__aboutUs .item .list {
+    width: 90%;
+    display: flex;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+  .footer__privacyList {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer__privacyList li {
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .header .container {
+    justify-content: space-between;
+  }
+  .header .logo {
+    display: block;
+  }
+  .header .btn__wrapper {
+    display: none;
+  }
+  .banner__left h1 {
+    font-size: 2.3rem;
+    width: 80%;
+    text-align: left;
+    line-height: 40px;
+    color: #333333;
+    margin: 5vh 0 0 0;
+  }
+  .banner__leftText {
+    width: 90%;
+    margin: 1rem 0 0 0;
+    text-align: left;
+  }
+  .banner__left button {
+    min-width: 80vw;
+  }
+  .banner__right img {
+    width: 75%;
+  }
+  .steps__title {
+    font-size: 2.2rem;
+    width: 80%;
+    margin: 2rem 0;
+  }
+  .steps__item {
+    position: static;
+    width: 75%;
+    height: auto;
+    box-sizing: content-box;
+    margin: 1rem auto;
+  }
+  .steps__item::after {
+    display: none;
+  }
+  .steps__item .steps__text {
+    max-height: none;
+    line-height: 30px;
+    overflow: visible;
+    font-size: 18px;
+  }
+  .people__title {
+    font-size: 2.2rem;
+    margin: 3rem 0 2rem 0;
+  }
+  .people__message {
+    font-size: 24px;
+    line-height: 29px;
+    width: 85%;
+  }
+  .people__circlesBtn {
+    top: 103%;
+  }
+  .questions__title {
+    font-size: 2.2rem;
+  }
+  .questions__wrapperItem {
+    padding: 15px;
+    width: 73%;
+  }
+  .contact__info {
+    width: 100%;
+    font-size: 18px;
+    color: #4F4F4F;
+    padding: 10vh 0 5vh 0;
+  }
+  .contact__infoTitle {
+    font-size: 2.2rem;
+    text-align: left;
+  }
+  .contact__info span {
+    color: black;
+  }
+  .contact__form form {
+    width: 100%;
+  }
+  .footer__aboutUs .item__title {
+    text-align: left;
+  }
+  .footer__aboutUs .item:nth-child(2) {
+    margin-top: 23rem;
+    text-align: left;
+    width: 95%;
+  }
+  .footer__aboutUs .item:nth-child(3) {
+    text-align: left;
+    width: 95%;
+  }
+  .footer__aboutUs .list {
+    flex-direction: column;
+  }
+  .footer__aboutUs .list li {
+    margin-bottom: 2rem;
   }
 }/*# sourceMappingURL=style2.css.map */

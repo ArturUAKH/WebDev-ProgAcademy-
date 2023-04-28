@@ -4,7 +4,7 @@
 }
 @font-face {
     font-family: 'Museo';
-    src: url(fonts2/MuseoSansCyrl-500.ttf);
+    src: url(fonts/MuseoSansCyrl-500.ttf);
 }
 body{
    font-family: 'Museo';
@@ -17,7 +17,7 @@ body{
     padding: 0 10px;
 }
 .title{
-    margin-top: 2em;
+    margin-top: 2rem;
     width: 40%;
     font-weight: 600;
     span{
@@ -449,6 +449,7 @@ body{
         row-gap: 15px;
         align-items: center;
         &Item{
+            font-weight: 600;
             position: relative;
             height: 12vh;
             width: 78%;
@@ -458,7 +459,6 @@ body{
             align-items: center;
             padding: 0 0 0 40px;
             color: #333333;
-            font-weight: 500;
             font-size: 24px;
             span{
                 position: absolute;
@@ -500,7 +500,6 @@ body{
         margin: 15vh 0 5vh 0;
         position: relative;
         width: 50%;
-        height: 81vh;
         form{
             box-sizing: border-box;
             position: absolute;
@@ -540,6 +539,56 @@ body{
         }
     }
 }
+.footer{
+    .container{
+        padding: 20px;
+    }
+    &__aboutUs{
+        position: relative;
+        display: flex;
+        column-gap: 7%;
+        .item{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+            color: #4F4F4F;            
+            &__title{
+                font-weight: 600;
+                color: #333333;
+                margin-bottom: 1rem;
+            }
+            }
+
+            .list{
+                width: 10vw;
+                font-size: 15px;
+                line-height: 16px;
+                font-weight: 600;
+                list-style: none;
+                color: #333333;
+                li{
+                    margin-bottom: 1rem;
+                    cursor: pointer;
+            }
+        }
+    }
+    &__privacy{
+        margin: 4rem 0 4rem 0;
+        &List{
+            width: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            li{
+                color: #828282;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 27px;
+            }
+        }
+    }
+}
+
 
 
 
@@ -576,9 +625,9 @@ body{
         height: 10vh;
     }
     .contact__info{
-        line-height: 20px;
+        line-height: 30px;
         &Support{
-            .support,.help,.owned{
+            .support,.owned{
                 margin-bottom: 1vh;
             }
         }
@@ -682,6 +731,182 @@ body{
                 width: 80%;
                 height: 90%;
                 padding: 10%;
+            }
+        }
+    }
+    .footer{
+        &__aboutUs{
+            margin: 0 auto;
+            flex-direction: column;
+            width: 100%;
+            img{
+                display: block;
+                margin: 0 auto;
+                margin-top: 1rem;
+            }
+            .item{
+                &:nth-child(2){
+                    margin:7rem auto 2rem auto;
+                    width: 60%;
+                    
+                }
+                &:nth-child(3){
+                    width: 60%;
+                    margin: 0 auto;
+                }
+                &__title{
+                    text-align: center;
+                }
+                .list{
+                    width: 90%;
+                    display: flex;
+                    position: absolute;
+                    top: 5rem;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    justify-content: space-around;
+
+                }
+            }
+        }
+        &__privacy{
+            &List{
+                flex-direction: column;
+                text-align: center;
+                li{
+                    margin-top:1rem ;
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (max-width:320px){
+    .header{
+        .container{
+            justify-content: space-between;
+        }
+        .logo{
+            display: block;
+        }
+        .btn__wrapper{
+            display: none;
+        }
+    }
+    .banner{
+        &__left{
+            h1{
+                font-size: 2.3rem;
+                width: 80%;
+                text-align: left;
+                line-height: 40px;
+                color: #333333;
+                margin: 5vh 0 0 0;
+            }
+            &Text{
+                width: 90%;
+                margin: 1rem 0 0 0;
+                text-align: left;
+            }
+            button{
+                min-width: 80vw;
+            }
+        }
+        &__right{
+            img{
+                width: 75%;
+            }
+        }
+    }
+    .steps{
+        &__title{
+            font-size:2.2rem;
+            width: 80%;
+            margin: 2rem 0;
+        }
+        &__item{
+            position:static;
+            width: 75%;
+            height: auto;
+            box-sizing:content-box;
+            
+            margin: 1rem auto;
+            &::after{
+                display: none;
+            }
+            .steps__text{
+                max-height: none;
+                line-height: 30px;
+                overflow: visible;
+                font-size: 18px;
+            }
+        }
+    }
+    .people{
+        &__title{
+            font-size: 2.2rem;
+            margin: 3rem 0 2rem 0;
+        }
+        &__message{
+            font-size: 24px;
+            line-height: 29px;
+            width: 85%;
+        }
+        &__circlesBtn{
+            top: 103%;
+        }
+    }
+    .questions{
+        &__title{
+            font-size: 2.2rem;
+        }
+        &__wrapperItem{
+            padding: 15px;
+            width: 73%;
+        }
+    }
+    .contact{
+        &__info{
+            width: 100%;
+            font-size: 18px;
+            color: #4F4F4F;
+            padding: 10vh 0 5vh 0;
+            &Title{
+                font-size: 2.2rem;
+                text-align: left;
+            }
+            span{
+                color:black;
+            }
+        }
+        &__form{
+            form{
+                width: 100%;
+            }
+        }
+    }
+    .footer{
+        &__aboutUs{
+            .item{
+                &__title{
+                    text-align: left;
+                }
+                &:nth-child(2){
+                    margin-top: 23rem;
+                    text-align: left;
+                    width: 95%;
+                }
+                &:nth-child(3){
+                    text-align: left;
+                    width: 95%;
+                }
+            }
+            .list{
+                flex-direction: column;
+                li{
+                    margin-bottom: 2rem;
+                }
             }
         }
     }
